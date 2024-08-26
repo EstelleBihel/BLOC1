@@ -118,6 +118,30 @@ Content-Type: text/plain; charset=utf-8
 La négociation de contenu permet une flexibilité dans la distribution des ressources, assurant que le client reçoit la version la plus appropriée de la ressource, qu'il s'agisse du format, de la langue, de l'encodage, ou du jeu de caractères. Cela améliore l'expérience utilisateur en offrant du contenu adapté à ses préférences et aux capacités de son système. 
 
 **Question 10**  
+| En-tête | Rôle | Illustration |  
+|---------|------|--------------|  
+| **'Host'** | Indique le nom de domaine et le port du serveur auquel la requête est destinée | 'Host: www.example.com' |  
+| **'User-Agent'** | Fournit des informations sur le client, comme le navigateur et le système d'exploitation | 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)' |  
+| **'Accept'** | Spécifie les types de contenu MIME que le client est prêt à recevoir | 'Accept: text/html, application/json' |  
+| **'Accept-Language'** | Indique les langues préférées du client pour la réponse | 'Accept-Language: en-US,en;q=0.9,fr;q=0.8' |  
+| **'Accept-Encoding'** | Spécifie les encodages de contenu que le client accepte  |  'Accept-Encoding: gzip, deflate, br' |  
+| **'Accept-Charset'** | Indique les jeux de caractères que le client accepte pour la réponse | 'Accept-Charset: utf-8, iso-8859-1;q=0.7'|  
+| **'Authorization'** | Envoie des informations d'authentification pour accéder à une ressource protégée | 'Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l |  
+| **'Content-Type'** | Indique le type de média du corps de la requête, généralement utilisé dans les requêtes POST | 'Content-Type: application/json' |  
+| **'Content-Length'** | Indique la taille du corps de la requête en octets | 'Content-Length: 348' |  
+| **'Cookie'** | Envoie des cookies au serveur, souvent utilisés pour maintenir les sessions | 'Cookie: sessionId=abc123; theme=dark' |  
+| **Referer** | Indique l'URL de la page qui a conduit à la requête en cours, pour le suivi de la navigation | 'Referer: https://www.google.com/' |  
+| **'Connection'** | Contrôle si la connexion doit rester ouverte ou non après l'envoi de la réponse | 'Connection: keep-alive' |  
+| **'If-Modified-Since'** | Permet au serveur de répondre avec un code 304 si la ressource n'a pas changé depuis la date indiquée | 'If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT'|  
+| **'If-None-Match'** | Permet au serveur de répondre avec un code 304 si l'ETag de la ressource correspond | 'If-None-Match: "686897696a7c876b7e" |  
+| **'Range'** | Demande une partie spécifique d'une ressource, utile pour reprendre un téléchargement interrompu | 'Range: bytes=500-999' |  
+| **'Cache-Control'** | Directives pour la mise en cache, indiquant comment la ressource doit être stockée et utilisée | 'Cache-Control: no-cache' |  
+| **'Upgrade-Insecure-Requests'** | Indique la préférence du client pour obtenir une version sécurisée d'une ressource, si disponible | 'Upgrade-Insecure-Requests: 1' |  
+
+
+
+
+
 
 
 
