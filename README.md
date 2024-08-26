@@ -32,7 +32,18 @@ Domaine et sous domaine => adresse
 Repertoire : Hierarchie des pages  
 
 **Question 6**  
-
+Il y a 5 classes de codes de status de la réponse HTTP  
+Chaque classe représente un type de réponse spécifique au serveur :  
+- 1xx : informations  
+-- 100 continue : le serveur a reçu les entêtes de la requête et le client peut continuer a envoyer le corps de la requête  
+- 2XX : Succès  
+- - 200 OK : le requête a réussi (page web demandée et envoyée correctement au client)  
+- 3xx : Redirection  
+-- 301 Moved Permanently : la ressource demandée a été déplacée de façon permanente à une nouvelle URL. Les futures requêtes doivent utiliser la nouvelles URL.
+- 4xx : Erreur du client
+-- 404 Not Found : le serveur n'a pas trouvé la ressource demandée . (URL incorreste ou ressource qui n'existe plus)
+- 5xx : Erreur du serveur
+-- 500 Internal Server Error : le serveur ne peut répondre à la requête
 
 
 
