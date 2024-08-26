@@ -2,6 +2,7 @@
 # TD1  
 
 **Question 1**  
+  
 **Méthode Get** utilisée pour la création de données ces données sont écrites directement dans l'URL  
 Donc visible par l'utilisateur  
 **Méthode POST** les données sont écrites par le serveur et donc non visible par l'utilisateur  
@@ -46,6 +47,75 @@ Chaque classe représente un type de réponse spécifique au serveur :
   - Exemple => **500 Internal Server Error** : le serveur ne peut répondre à la requête  
 
 **Question 7**  
+La négociation de contenu HTTP est un mécanisme utilisé dans les communications entre un client (comme un navigateur web) et un serveur pour déterminer la version la plus appropriée d'une ressource à renvoyer au client. Cette négociation permet d'adapter le contenu en fonction des préférences ou des capacités du client.    
+**Principe Général**
+    **Demande du client (Request)** : Le client envoie une requête HTTP au serveur. Cette requête peut contenir des en-têtes qui indiquent ses préférences pour le contenu souhaité.  
+    **Analyse du serveur (Response)** : Le serveur examine ces en-têtes pour déterminer quel type de contenu il doit renvoyer.  
+    **Réponse du serveur** : Le serveur sélectionne la version la plus appropriée de la ressource demandée et l'envoie au client. Si plusieurs versions sont disponibles et compatibles avec les préférences du client, le serveur en choisit une. Sinon, il peut renvoyer une erreur 406 (Not Acceptable) si aucune version ne correspond.
+**Types de Négociation de Contenu**
+- **1/ Négociation de Contenu Basée sur le Type MIME (Accept) :**  
+        Le client indique les types MIME qu'il accepte, par exemple text/html, application/json.  
+        Le serveur renvoie le contenu dans le format le plus approprié.  
+        Exemple : Un client peut préférer recevoir une page web en HTML (text/html) mais accepte également un flux de données JSON (application/json).
+  
+**Illustration**  
+````   
+GET /resource HTTP/1.1  
+Host: www.example.com  
+Accept: text/html, application/json  
+````  
+**Réponse possible** 
+````  
+HTTP/1.1 200 OK  
+Content-Type: text/html  
+````  
+- **2/ Négociation Basée sur la Langue (Accept-Language) :**  
+    Le client spécifie les langues qu'il préfère, comme fr (français), en (anglais).  
+    Le serveur choisit la version linguistique la plus adaptée de la ressource.
+  
+**Illustration**  
+````
+GET /page HTTP/1.1  
+Host: www.example.com  
+Accept-Language: fr, en;q=0.8  
+````
+**Réponse possible**   
+````
+HTTP/1.1 200 OK
+Content-Language: fr
+````  
+- **3/ Négociation Basée sur l’Encodage (Accept-Encoding) :**  
+    Le client indique les encodages de contenu qu'il supporte, par exemple gzip, deflate.
+    Le serveur compresse la ressource avec l'encodage le plus approprié avant de la renvoyer.  
+  
+**Illustration**  
+````  
+GET /file HTTP/1.1  
+Host: www.example.com  
+Accept-Encoding: gzip, deflate  
+````
+**Réponse possibble**  
+````
+HTTP/1.1 200 OK  
+Content-Encoding: gzip  
+````
+- **4/ Négociation Basée sur les Caractères (Accept-Charset) :**  
+    Le client indique les jeux de caractères qu'il préfère, comme UTF-8, ISO-8859-1.  
+    Le serveur renvoie la ressource dans le jeu de caractères le plus approprié.
+  
+**Illustration**  
+````  
+GET /document HTTP/1.1  
+Host: www.example.com  
+Accept-Charset: utf-8, iso-8859-1;q=0.7  
+````  
+**Réponse possibble**  
+````
+HTTP/1.1 200 OK  
+Content-Type: text/plain; charset=utf-8  
+````  
+**Conclusion**  
+La négociation de contenu permet une flexibilité dans la distribution des ressources, assurant que le client reçoit la version la plus appropriée de la ressource, qu'il s'agisse du format, de la langue, de l'encodage, ou du jeu de caractères. Cela améliore l'expérience utilisateur en offrant du contenu adapté à ses préférences et aux capacités de son système. 
 
 **Question 10**  
 
