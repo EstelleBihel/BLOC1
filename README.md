@@ -10,8 +10,13 @@ Donc visible par l'utilisateur
 
 | Get | Post |    
 | --- | ---- |  
-| Limite de table |   
-| limite de type |  
+| Visible pour l’utilisateur dans le champ d’adresse | Invisible pour l’utilisateur |  
+| Les paramètres de l’URL sont stockés en même temps que l’URL | L’URL est enregistrée sans paramètres URL |  
+| Les paramètres de l’URL sont stockés sans chiffrement | Les paramètres de l’URL ne sont pas enregistrés automatiquement |  
+| Les paramètres de l’URL ne sont pas envoyés à nouveau | Le navigateur avertit que les données du formulaire doivent être renvoyées |  
+| Caractères ASCII uniquement | Caractères ASCII mais également données binaires |  
+| Longueur des données limitées longueur maximale de l’URL à 2 048 caractères | Longueur des données illimitées |  
+
 
 **Question 3**  
 Protocole HTTP extensible => posibilité de rajouter des information au sein de la recherche HTTP  
