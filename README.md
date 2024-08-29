@@ -117,8 +117,8 @@ Content-Type: text/plain; charset=utf-8
 **Conclusion**  
 La négociation de contenu permet une flexibilité dans la distribution des ressources, assurant que le client reçoit la version la plus appropriée de la ressource, qu'il s'agisse du format, de la langue, de l'encodage, ou du jeu de caractères. Cela améliore l'expérience utilisateur en offrant du contenu adapté à ses préférences et aux capacités de son système. 
 
-**Question 8**
-Installation Xampp  
+**Question 8**  
+**Installation Xampp**  
 Config du virtualhost  
 => Note :  
 ouvrir Notepad++ en admin puis recharcher le fichier c:\windows\system32\drivers\etc\hosts depuis NotePad++  
@@ -140,6 +140,15 @@ Puis ajouter
 </VirtualHost>  
 Créer un fichier index.html  
 J'ai créé ce dossier dans {xamppfolder}\apache\conf\extra  
+
+**Question 9**  
+**CURL (Client URL)**  
+=> Récupérer le contenu dune ressource  
+CMD : CURL http://dev.local  
+C:\Users\Bihel>curl http://dev.local  
+curl: (7) Failed to connect to dev.local port 80 after 2041 ms: Couldn't connect to server  
+C:\Users\Bihel>curl http://dev.local/notExisting  
+curl: (7) Failed to connect to dev.local port 80 after 2038 ms: Couldn't connect to server  
 
 **Question 10**  
 | En-tête | Rôle | Illustration |  
