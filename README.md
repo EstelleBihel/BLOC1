@@ -116,52 +116,41 @@ Content-Type: text/plain; charset=utf-8
 ````  
 **Conclusion**  
 La négociation de contenu permet une flexibilité dans la distribution des ressources, assurant que le client reçoit la version la plus appropriée de la ressource, qu'il s'agisse du format, de la langue, de l'encodage, ou du jeu de caractères. Cela améliore l'expérience utilisateur en offrant du contenu adapté à ses préférences et aux capacités de son système. 
-
+  
 **Question 8**  
 **Installation Xampp**  
-Config du virtualhost  
-=> Note :  
-ouvrir Notepad++ en admin puis recharcher le fichier c:\windows\system32\drivers\etc\hosts depuis NotePad++  
-Tester la résolution DNS : CMD sur c:\windows\system32\drivers\etc\hosts  
-Ajout VirtualHost {xamppfolder}\apache\conf\extra\httpd-vhost.conf => Ouvrir par Notepad en admin puis ajouter 
-<VirtualHost *:80>  
-    DocumentRoot "C:/xampp/htdocs/"  
-    ServerName 127.0.0.1  
-</VirtualHost>  
-
-C:\Users\Bihel>ping dev.local  
-Envoi d’une requête 'ping' sur dev.local [127.0.0.1] avec 32 octets de données :   
-Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
-Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
-Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
-Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
-Statistiques Ping pour 127.0.0.1:  
-    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),  
-Durée approximative des boucles en millisecondes :  
-    Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms  
-
-Puis ajouter  
-<VirtualHost *:80>  
-    DocumentRoot "c:/work/web"  
-    ServerName dev.local  
-    ErrorLog "logs/dev.local-error.log"  
-    CustomLog "logs/dev.local-access.log" common  
-    <Directory "c:/work/web">  
-        Require all granted     
-    </Directory>  
-</VirtualHost>  
-Créer un fichier index.html  
-J'ai créé ce dossier dans {xamppfolder}\apache\conf\extra  
-
+  
 **Question 9**  
 **CURL (Client URL)**  
 => Récupérer le contenu dune ressource  
-CMD : CURL http://dev.local  
+  
+CMD               
+                                               
 C:\Users\Bihel>curl http://dev.local  
-curl: (7) Failed to connect to dev.local port 80 after 2041 ms: Couldn't connect to server  
-C:\Users\Bihel>curl http://dev.local/notExisting  
-curl: (7) Failed to connect to dev.local port 80 after 2038 ms: Couldn't connect to server  
-
+<!doctype html>  
+<html lang="fr">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+    <title>Web local</title>  
+</head>  
+<body>  
+    <h1>TDs web</h1>  
+</body>  
+</html>  
+  
+C:\Users\Bihel>curl http://dev.local/notExisting  C:\Users\Bihel>curl http://dev.local/notexisting  
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">  
+<html><head>  
+<title>404 Not Found</title>  
+</head><body>  
+<h1>Not Found</h1>  
+<p>The requested URL was not found on this server.</p>  
+<hr>  
+<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at dev.local Port 80</address>  
+</body></html>  
+  
 **Question 10**  
 | En-tête | Rôle | Illustration |  
 |---------|------|--------------|  
