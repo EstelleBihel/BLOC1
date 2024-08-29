@@ -128,6 +128,18 @@ Ajout VirtualHost {xamppfolder}\apache\conf\extra\httpd-vhost.conf => Ouvrir par
     DocumentRoot "C:/xampp/htdocs/"  
     ServerName 127.0.0.1  
 </VirtualHost>  
+
+C:\Users\Bihel>ping dev.local  
+Envoi d’une requête 'ping' sur dev.local [127.0.0.1] avec 32 octets de données :   
+Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
+Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
+Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
+Réponse de 127.0.0.1 : octets=32 temps<1ms TTL=128  
+Statistiques Ping pour 127.0.0.1:  
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),  
+Durée approximative des boucles en millisecondes :  
+    Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms  
+
 Puis ajouter  
 <VirtualHost *:80>  
     DocumentRoot "c:/work/web"  
