@@ -117,6 +117,30 @@ Content-Type: text/plain; charset=utf-8
 **Conclusion**  
 La négociation de contenu permet une flexibilité dans la distribution des ressources, assurant que le client reçoit la version la plus appropriée de la ressource, qu'il s'agisse du format, de la langue, de l'encodage, ou du jeu de caractères. Cela améliore l'expérience utilisateur en offrant du contenu adapté à ses préférences et aux capacités de son système. 
 
+**Question 8**
+Installation Xampp  
+Config du virtualhost  
+=> Note :  
+ouvrir Notepad++ en admin puis recharcher le fichier c:\windows\system32\drivers\etc\hosts depuis NotePad++  
+Tester la résolution DNS : CMD sur c:\windows\system32\drivers\etc\hosts  
+Ajout VirtualHost {xamppfolder}\apache\conf\extra\httpd-vhost.conf => Ouvrir par Notepad en admin puis ajouter 
+<VirtualHost *:80>  
+    DocumentRoot "C:/xampp/htdocs/"  
+    ServerName 127.0.0.1  
+</VirtualHost>  
+Puis ajouter  
+<VirtualHost *:80>  
+    DocumentRoot "c:/work/web"  
+    ServerName dev.local  
+    ErrorLog "logs/dev.local-error.log"  
+    CustomLog "logs/dev.local-access.log" common  
+    <Directory "c:/work/web">  
+        Require all granted     
+    </Directory>  
+</VirtualHost>  
+Créer un fichier index.html  
+J'ai créé ce dossier dans {xamppfolder}\apache\conf\extra  
+
 **Question 10**  
 | En-tête | Rôle | Illustration |  
 |---------|------|--------------|  
