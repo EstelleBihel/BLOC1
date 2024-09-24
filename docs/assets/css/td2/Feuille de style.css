@@ -3,9 +3,12 @@ body {
     font-family: serial, sans-serif;
     line-height: 1.6;
     margin: 20px;
-    background-color:green;
 }
 
-h1, h2, h3, h4 {
+h2 {
     color:green;
+}
+
+h4{
+    color:rgb(193, 102, 102);
 }

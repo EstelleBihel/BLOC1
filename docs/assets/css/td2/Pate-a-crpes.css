@@ -1,16 +1,12 @@
 body{
-        margin: 3px;   
-        PADDING:20px;   
-        font-size: 1,5rem;
+        margin: 30px;   
+        PADDING:40px;   
+        font-size:  1,5rem;
         font-family:'Times New Roman', Times, sans-serif;
   
 }
 
 div{
-        background-color: rgb(213, 211, 211);
-
-
+        background-color:rgb(215, 214, 214);
 }
-h1{
-        color: blue;
-}
+
