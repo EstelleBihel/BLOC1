@@ -172,12 +172,3 @@ C:\Users\Bihel>curl http://dev.local/notExisting  C:\Users\Bihel>curl http://dev
 | **'Cache-Control'** | Directives pour la mise en cache, indiquant comment la ressource doit être stockée et utilisée | 'Cache-Control: no-cache' |  
 | **'Upgrade-Insecure-Requests'** | Indique la préférence du client pour obtenir une version sécurisée d'une ressource, si disponible | 'Upgrade-Insecure-Requests: 1' |  
 
-
-
-
-
-
-
-
-
-
