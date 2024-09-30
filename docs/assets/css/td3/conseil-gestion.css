@@ -1,0 +1,18 @@
+body{
+    background-image:url("../../images/df-min.jpg");
+    background-size:cover;
+
+.flex-container{
+    display:flex;
+    column-width: 10em;
+    /* align-items:flex-end;
+    justify-content: flex-center; */
+    /* align-items: bottom;
+    justify-content: bottom; */*
+
+}
+.flex-items{
+    align-items:bottom;
+    justify-content: bottom; 
+    
+}
