@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background-color</title>
-</head>
 <style>
-    body{
+    body {
         font-family: Arial, sans-serif;
         text-align: center;
+        margin-top: 50px;
         background-color: aqua;
     }
+    #changeColorButton {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 </style>
+</head>
 <body>
     <h1> Clic sur le bouton pour changer la couleur de fond</h1>
     <button id="changeColorButton">Changer la couleur de fond</button>
+
     <script>
-        function change(){
-            let button = red
-            document.body.style.backgroundcolor = button;
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "pink";
         }
-        document.getElementById("changeColorButton").addEventListener("click", change);
+        document.getElementById("changeColorButton").onclick = changeBackgroundColor;
+        // .addEventListener("Click", changeBackgroundColor);
     </script>
 </body>
 </html>
