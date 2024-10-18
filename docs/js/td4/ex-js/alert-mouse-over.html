@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alert-mouse</title>
-    <style>
+         <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: aqua;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+        #alertButton {
+            background-color: lightgray; /* Couleur par défaut du bouton */
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
         }
-    
     </style>
 </head>
 <body>
-<h1>Je veux ce titre en rose</h1>
-
-<div class="mousemove"></div>
+<h1>Survoler le boutton</h1>
+<button id="alertButton">Survolez-moi</button>
 
     <script>
-        function mouseover(){
-            document.h1.color = "pink";
-        }
-        document.getElementById.(h1).mousemove = mouseover;
+        const alertButton = document.getElementById('alertButton');
 
-        //const mousemove = document.queryselector("mousemove");
+        alertButton.addEventListener('mouseover', function() {
+        alert("Vous avez survolé le bouton !");
+        });
 
-        
-       // h1.addEventListener('mouseover',(){
-       //     h1.style.color = "pink"
-       // })
-
+      
     </script>
 </body>
 </html>
