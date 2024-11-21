@@ -29,11 +29,11 @@ body{
     color:#fff
 }
 .center-box h1 {
-    font-size: 1em;
+    font-size: 1,5em;
 }
 .center-box p{
-    font-size: 2.5em;
-    margin-top: 10px;
+    font-size: 1,2em;
+    /*margin-top: 10px;*/
 }
 .page-container {
     display: flex;
@@ -48,19 +48,22 @@ body{
     align-items: flex-end;
     height: 80vh;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     column-width: 30em;
     gap: 20px;
-    padding: 10px 10px 10px 50px;
+    padding: 0;
     margin: 0;
      
 }
 .flex-items{
-    height: 35vh;
-    width: 10vh;
+    width: 90%; /* Plus large pour s'adapter à l'écran */
+    height: auto; /* Hauteur automatique */
+    margin-bottom: 20px; /* Espace entre les items */
+    /*height: 35vh;
+    width: 10vh;*/
     border-radius: 10px;
     padding: 10px;    
-    text-align: left;
+    text-align: center;
     flex: 1;
     border: 1px solid black;
     background-color: white;
@@ -70,43 +73,28 @@ body{
     justify-content: bottom;  */
     
 }
-.icon1 {
-    width: 60px;
-    height: 60px;
+.icon1, .icon2, .icon3, .icon4 {
+    width: 50px;
+    height: 50px;
     fill:#fff;
     color:#fff;
     background-color:rgb(231, 86, 33);
     border-radius: 50px;
-    margin-right: 200px;
+    margin: 0 auto 10px auto;
 }
-.icon2{
-    width: 60px;
-    height: 60px;
-    fill:#fff;
-    color:#fff;
-    background-color:rgb(231, 86, 33);
-    border-radius: 50px;
-    margin-right: 200px;
 
-}
-.icon3{
-    width: 60px;
-    height: 60px;
-    fill:#fff;
-    color:#fff;
-    background-color:rgb(231, 86, 33);
-    border-radius: 50px;
-    margin-right: 200px;
-}
-.icon4{
-    width: 60px;
-    height: 60px;
-    fill:#fff;
-    color:#fff;
-    background-color:rgb(231, 86, 33);
-    border-radius: 50px;
-    margin-right: 200px;
-}
+
+@media (max-width: 1024px) {
+    .top-container {
+      width: 50%; /* Réduit la largeur */
+      margin: 5vh auto; /* Centre horizontalement */
+    }
+
+@media (max-width: 768px) {
+        .top-container {
+          padding: 20px;
+          width: 90%; /* Presque toute la largeur */
+        }
 /* .flex-items:nth-child(1){
     
 } */
