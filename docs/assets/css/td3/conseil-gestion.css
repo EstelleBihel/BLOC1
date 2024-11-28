@@ -1,0 +1,100 @@
+
+
+body{
+    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 130vh;
+    font-size: small;
+    font-family: Arial, sans-serif;
+    /* background-origin: 100% 70vh; */
+    background-image:url("../../images/df-min.jpg");
+    background-color: lightgray;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+    background-position: center center;
+}
+.top-container{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    width: 30%;
+    background-color: hsl(15, 87%, 55%);
+    padding: 70px 40px 40px 60px;
+    margin: 5vh 20vh 20vh 60vh;
+    text-align: center;
+    color:#fff
+}
+.center-box h1 {
+    font-size: 1,5em;
+}
+.center-box p{
+    font-size: 1,2em;
+    /*margin-top: 10px;*/
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligne la flex-container en bas de la page */
+    height: 60%;
+}
+
+.flex-container{
+    
+    display:flex;
+    align-items: flex-end;
+    height: 80vh;
+    justify-content: space-between;
+    width: 100%;
+    column-width: 30em;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+     
+}
+.flex-items{
+    width: 90%; /* Plus large pour s'adapter à l'écran */
+    height: auto; /* Hauteur automatique */
+    margin-bottom: 20px; /* Espace entre les items */
+    /*height: 35vh;
+    width: 10vh;*/
+    border-radius: 10px;
+    padding: 10px;    
+    text-align: center;
+    flex: 1;
+    border: 1px solid black;
+    background-color: white;
+    /* height: 35vh;
+    width: 70vh; */
+    /* align-items:bottom;
+    justify-content: bottom;  */
+    
+}
+.icon1, .icon2, .icon3, .icon4 {
+    width: 50px;
+    height: 50px;
+    fill:#fff;
+    color:#fff;
+    background-color:rgb(231, 86, 33);
+    border-radius: 50px;
+    margin: 0 auto 10px auto;
+}
+
+
+@media (max-width: 1024px) {
+    .top-container {
+      width: 50%; /* Réduit la largeur */
+      margin: 5vh auto; /* Centre horizontalement */
+    }
+
+@media (max-width: 768px) {
+        .top-container {
+          padding: 20px;
+          width: 90%; /* Presque toute la largeur */
+        }
+/* .flex-items:nth-child(1){
+    
+} */
