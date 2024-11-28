@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        </style>
+</head>
+<body>
+    <label for = "nombre1">Nombre 1 : </label>
+    <input type = "texte" id="nombre1" placeholder="Saisir le nombre1"
+</br>
+    <label for = "nombre2">Nombre 2 : </label>
+    <input type = "texte" id="nombre2" placeholder="Saisir le nombre2"
+</br>
+    <button id="calculer">Calculer la somme</button>
+    <p id="resultat"></p>
+
+    <script>
+        document.getElementById("calculer").addEventListener("click", function() {
+            let nombre1 = parseFloat(document.getElementById("nombre1").value);
+            let nombre2 = parseFloat(document.getElementById("nombre2").value);
+
+            if (isNaN(nombre1) || isNaN(nombre2)) {
+                document.getElementById("resultat").textContent = "Entrez nombres valides";}
+                else {
+                    let somme = nombre1 + nombre2;
+                    document.getElementById("resultat").textContent = "La somme est : " + somme;
+                }
+            });
+
+    </script>
+</body>
+</html>

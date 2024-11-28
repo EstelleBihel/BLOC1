@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle-check</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: aqua;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #elementToToggle {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: pink;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Afficher ou cacher un élément</h1>
+
+      
+        <label>
+            <input type="checkbox" id="toggleCheckbox"> Afficher l'élément
+        </label>
+
+        <div id="elementToToggle" style="display: none;">Afficher/cacher</div>
+    </div>
+
+    <script>
+     
+        const toggleCheckbox = document.getElementById('toggleCheckbox');
+        const elementToToggle = document.getElementById('elementToToggle');
+
+        
+        toggleCheckbox.addEventListener('change', function() {
+           
+            if (toggleCheckbox.checked) {
+                elementToToggle.style.display = 'block';
+            } else {
+                elementToToggle.style.display = 'none';
+            }
+        });
+
+    </script>
+
+</body>
+</html>
