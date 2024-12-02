@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#clock {
+    font-size: 48px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#itemList li {
+    list-style-type: none;
+    padding: 5px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+#itemToDelete {
+    padding: 20px;
+    background-color: pink;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
